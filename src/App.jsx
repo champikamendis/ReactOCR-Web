@@ -17,6 +17,8 @@ class App extends Component {
                   <div className="components">
                     <CustomHeader />          
                     <Download />
+                    <br/>
+                    <br/>
                     <FileUploader/>
                     
                   </div>

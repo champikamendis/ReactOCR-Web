@@ -56,7 +56,6 @@
     font-family: serif;
     font-weight: bold;
     margin-top: 2.5%;
-    
     text-align: center;
   }
  
@@ -79,5 +78,50 @@
   .components{
     margin-top: -3.75%;
   }
+
+  .uploader{
+
+    margin-left: 1%;
+    border-radius: 10px;
+    
+    
+  }
+
+  .uploader:hover {
+    background-color: RoyalBlue;
+ 
+
+  }
+  .input {
+    
+    margin-left: 16%;
+    background-color: blanchedalmond;
+    ;
+  }
+
+  .uploadedImage {
+
+    height: 400px;
+    width: 400px;
+    margin-left: 15%;
+    
+
+  }
+
+  .txtfield {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    margin-left: 4%;
+  }
+  .OCRbtn {
+    margin-left: 5%;
+  }
+ 
+
+  
+  
+  
+  
 
  

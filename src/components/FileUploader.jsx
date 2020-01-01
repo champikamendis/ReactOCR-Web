@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
+
 export default class FileUploader extends Component {
         state={
         selectedFile:null
@@ -28,10 +29,20 @@ export default class FileUploader extends Component {
     render() { 
         return ( 
             <div>
-                <input type='file' onChange={this.fileSelectedHandler} />
-                <button onClick={this.fileUploadHandler}>Upload</button>
-                <br/>
-                <img scr={this.state.url || 'https://via.placeholder.com/400x500'} alt="Uploaded Image" height="400" width="500" />
+              <container className="imageHolder">
+                  <input type='file' className="input" onChange={this.fileSelectedHandler} />
+                  <button className="uploader" onClick={this.fileUploadHandler}>Upload</button>
+                  <br/>
+                  <br/>
+                  <img className="uploadedImage" scr={this.state.selectedFile||'./assets/1.png'}  />
+              </container>
+              <button type="submit" className="OCRbtn">Start OCR</button>
+              <container className="textHolder">
+                  <input type='text' className="txtfield" />
+                  <br/>
+              </container>
+
+              
             </div>
         )
     }
