@@ -4,11 +4,13 @@ import axios from 'axios';
 
 export default class FileUploader extends Component {
         state={
-        selectedFile:null
+        selectedFile:null,
+        imageUrl:null
       }
 
       fileSelectedHandler = event => {
         this.setState({
+          imageUrl:URL.createObjectURL(event.target.files[0]),
           selectedFile: event.target.files[0]
     
         })
@@ -34,7 +36,7 @@ export default class FileUploader extends Component {
                   <button className="uploader" onClick={this.fileUploadHandler}>Upload</button>
                   <br/>
                   <br/>
-                  <img className="uploadedImage" scr={this.state.selectedFile||'./assets/1.png'}  />
+                  <img className="uploadedImage" src={this.state.imageUrl ?this.state.imageUrl : './assets/400x400.png'}  />
               </container>
               <button type="submit" className="OCRbtn">Start OCR</button>
               <container className="textHolder">
