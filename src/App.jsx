@@ -5,6 +5,7 @@ import { BrowserRouter as Router} from 'react-router-dom';
 import CustomHeader from './components/CustomHeader'; 
 import Download from './components/Download';
 import FileUploader from './components/FileUploader';
+import Footer from './components/Footer';
 
   
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
                   </div>
               
             </div>
+            <Footer></Footer>
         
         </div> 
       </Router>
