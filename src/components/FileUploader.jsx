@@ -29,7 +29,7 @@ export default class FileUploader extends Component {
             console.log(res);
             this.setState({
               ...this.state,
-              textConverted:res.data
+              textConverted:res.data.result
             });
             
         });
