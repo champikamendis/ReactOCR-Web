@@ -30,26 +30,52 @@ export default class FileUploader extends Component {
             this.setState({
               ...this.state,
               textConverted:res.data.result
-            });
+            })
             
-        });
-    
+            
+        }).catch(err=>console.error(err.message))
+
+        // Best Practis
+        // try {
+        //   const res = await axios.post('http://localhost:8000/upload', fd, {
+        //   onUploadProgress : ProgressEvent => {
+        //     console.log('Upload Progress: ' + Math.round(ProgressEvent.loaded / ProgressEvent.total*100) + '%')
+        //   }
+        // });
+
+        // this.setState({
+        //   ...this.state,
+        //   textConverted:res.data.result
+        // })
+
+
+        // } catch (err) {
+        //   console.error(err.message)
+        // }
+
+
+
       }
     render() { 
         return ( 
             <div>
-              <container className="imageHolder">
-                  <input type='file' className="input" onChange={this.fileSelectedHandler} />
-                  <button className="uploader" onClick={this.fileUploadHandler}>Upload</button>
-                  <br/>
-                  <br/>
-                  <img className="uploadedImage" src={this.state.imageUrl ?this.state.imageUrl : 'https://via.placeholder.com/400x400'}  />
-              </container>
-              <button type="submit" className="copy">Copy To Clipboard</button>
-              <container className="textHolder">
-                  <textarea rows="10" cols="50" className="txtfield" value={this.state.textConverted}/>
-                  <br/>
-              </container>
+              <head>
+                  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+              </head>
+            
+                  
+                  <container className="imageHolder">
+                      <input type='file' className="input" onChange={this.fileSelectedHandler} />
+                      <button className="uploader" onClick={this.fileUploadHandler}>Upload</button>
+                      <br/>
+                      <br/>
+                      <img className="uploadedImage" src={this.state.imageUrl ?this.state.imageUrl : 'https://via.placeholder.com/400x400'}  />
+                  </container>
+                  <button type="submit" className="copy">Copy To Clipboard</button>
+                  <container className="textHolder">
+                      <textarea rows="10" cols="50" className="txtfield" value={this.state.textConverted}/>
+                      <br/>
+                  </container>
             </div>
         )
     }

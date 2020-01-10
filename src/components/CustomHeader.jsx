@@ -9,17 +9,17 @@ export default class CustomHeader extends Component {
 
             
             <div>
+                <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+                </head>
                 <div className="header">
 
                     <div>
                         <Image src="./assets/f4-logo.png" />  
                         <h2 className="name">OCR CONVERTER</h2>
-                        <button class="btn"><i class="logoutbtn"></i> Logout</button>
-                        
-                        
+                        <button class="btn"><i class="logoutbtn"></i> Logout</button>  
                     </div>
                 </div>
-
                 <div className="mainImage">
                     <Image src = "./assets/1.png" />
 

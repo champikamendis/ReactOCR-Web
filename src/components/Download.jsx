@@ -7,10 +7,16 @@ export default class Download extends Component {
         
         return (
             <div>
-                <h2 className="downloadtxt">Click Download button to download our OCR Mobile Application</h2>
-                <button className='downloadbtn'>DOWNLOAD MOBILE APP FOR OCR</button>
-                
-                <br></br>
+                <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+                </head>
+                    
+                    <div>
+                        <h2 className="downloadtxt">Click Download button to download our OCR Mobile Application</h2>
+                        <button className='downloadbtn'>DOWNLOAD MOBILE APP FOR OCR</button>
+                    
+                    </div>
+                    <br></br>
                 
                 
 
